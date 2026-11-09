@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use — Kaiva</title>
+  <meta name="description" content="Terms of Use for Kaiva, a calorie and nutrition tracker for Android. Rules for using the app, nutrition estimates, AI photo analysis and Premium subscriptions.">
+  <meta name="robots" content="index, follow">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0F14">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F1F2F4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0F14'/%3E%3Cpath d='M16 6c-4.6 4.3-8 7.6-8 12a8 8 0 0 0 16 0c0-4.4-3.4-7.7-8-12Z' fill='%237CE7B2'/%3E%3Cpath d='M16 12v11M16 19c-2.8 0-4.6-1.9-4.6-4.6 2.8 0 4.6 1.9 4.6 4.6Zm0 0c0-2.8 1.9-4.6 4.6-4.6 0 2.8-1.9 4.6-4.6 4.6Z' fill='none' stroke='%2306110C' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0B0F14;
+      --bg-top: #0E1A17;
+      --surface: #141C23;
+      --surface-2: #1A242D;
+      --border: #22303A;
+      --text: #F2F6F8;
+      --muted: #A6B4BE;
+      --faint: #7D8D98;
+      --accent: #7CE7B2;
+      --accent-2: #D4F76A;
+      --accent-ink: #06110C;
+      --card-glow: rgba(124, 231, 178, 0.10);
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        color-scheme: light;
+        --bg: #F1F2F4;
+        --bg-top: #F8F9FB;
+        --surface: #FFFFFF;
+        --surface-2: #ECEFF3;
+        --border: #E2E5EA;
+        --text: #12151A;
+        --muted: #555C66;
+        --faint: #646B76;
+        --accent: #4F3FE0;
+        --accent-2: #E2553C;
+        --accent-ink: #FFFFFF;
+        --card-glow: rgba(79, 63, 224, 0.06);
+        --shadow: 0 18px 44px rgba(20, 25, 40, 0.08);
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(1100px 520px at 50% -8%, var(--card-glow), transparent 70%),
+        linear-gradient(180deg, var(--bg-top) 0, var(--bg) 460px);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      z-index: 10;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 700;
+      text-decoration: none;
+      transition: top 0.15s ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .wrap {
+      width: min(100% - 40px, 860px);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 24px 0 8px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .brand-mark svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 52px 0 8px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0 16px;
+      font-size: clamp(2.25rem, 6vw, 3.45rem);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .lead {
+      max-width: 64ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2.2vw, 1.16rem);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 0;
+      margin-top: 24px;
+      color: var(--faint);
+      font-size: 0.86rem;
+    }
+
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .meta span + span::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      margin: 0 12px;
+      border-radius: 50%;
+      background: var(--faint);
+    }
+
+    .summary {
+      position: relative;
+      overflow: hidden;
+      margin: 36px 0 8px;
+      padding: 24px 26px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, var(--card-glow), transparent 62%),
+        var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .summary h2 {
+      margin: 0 0 14px;
+      font-size: 1.12rem;
+      letter-spacing: -0.01em;
+    }
+
+    .checks {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checks li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .checks li::before {
+      content: "\2713";
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 900;
+    }
+
+    .toc {
+      margin: 26px 0 0;
+      padding: 20px 22px;
+      border: 1px dashed var(--border);
+      border-radius: 16px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      color: var(--faint);
+      font-size: 0.74rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .toc ol {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc li {
+      counter-increment: toc;
+    }
+
+    .toc a {
+      display: flex;
+      gap: 10px;
+      padding: 6px 8px;
+      border-radius: 9px;
+      color: var(--text);
+      font-size: 0.93rem;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      background: var(--surface-2);
+      text-decoration: none;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      color: var(--faint);
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.9;
+    }
+
+    main {
+      padding-bottom: 24px;
+    }
+
+    section.doc {
+      padding: 34px 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 20px;
+    }
+
+    section.doc h2 {
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+      margin: 0 0 14px;
+      font-size: clamp(1.28rem, 3vw, 1.55rem);
+      letter-spacing: -0.018em;
+      line-height: 1.25;
+    }
+
+    section.doc h2 .n {
+      flex: none;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    section.doc h3 {
+      margin: 26px 0 8px;
+      font-size: 1.02rem;
+      letter-spacing: -0.005em;
+    }
+
+    section.doc p {
+      margin: 0 0 14px;
+    }
+
+    section.doc p:last-child {
+      margin-bottom: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .note {
+      margin: 18px 0;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .callout {
+      margin: 18px 0;
+      padding: 15px 18px;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent-2);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    ul.plain {
+      margin: 0 0 14px;
+      padding-left: 1.15em;
+    }
+
+    ul.plain li {
+      margin-bottom: 7px;
+    }
+
+    ul.plain li::marker {
+      color: var(--accent);
+    }
+
+    dl.terms {
+      margin: 0;
+    }
+
+    dl.terms div {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    dl.terms div:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    dl.terms dt {
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    dl.terms dd {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      margin: 18px 0 4px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    caption {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      color: var(--faint);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    th,
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:first-child,
+    th:first-child {
+      color: var(--text);
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    td .policy {
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 12px;
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--border);
+      color: var(--faint);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      .wrap {
+        width: min(100% - 32px, 860px);
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+
+      .badge {
+        display: none;
+      }
+
+      .meta {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .meta span + span::before {
+        display: none;
+      }
+
+      table,
+      thead,
+      tbody,
+      tr,
+      th,
+      td {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        padding: 8px 16px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        padding: 10px 0 0;
+        border: 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 2px;
+        color: var(--faint);
+        font-size: 0.69rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      td:first-child {
+        white-space: normal;
+        font-size: 1.02rem;
+      }
+
+      td:first-child::before {
+        display: none;
+      }
+
+      td .policy {
+        white-space: normal;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .skip-link {
+        transition: none;
+      }
+    }
+
+    @media print {
+      :root {
+        color-scheme: light;
+        --bg: #FFFFFF;
+        --bg-top: #FFFFFF;
+        --surface: #FFFFFF;
+        --surface-2: #F2F2F2;
+        --border: #D8DCE2;
+        --text: #111111;
+        --muted: #444444;
+        --faint: #666666;
+        --accent: #111111;
+        --accent-2: #111111;
+        --accent-ink: #FFFFFF;
+        --card-glow: transparent;
+        --shadow: none;
+      }
+
+      body {
+        background: #FFFFFF;
+        font-size: 11pt;
+      }
+
+      .site-header,
+      .toc,
+      .skip-link {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 0;
+      }
+
+      .summary {
+        box-shadow: none;
+        border: 1px solid #CCCCCC;
+      }
+
+      section.doc {
+        break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Kaiva — back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img" focusable="false">
+            <path d="M16 6c-4.6 4.3-8 7.6-8 12a8 8 0 0 0 16 0c0-4.4-3.4-7.7-8-12Z" fill="#7CE7B2"/>
+            <path d="M16 12v11M16 19c-2.8 0-4.6-1.9-4.6-4.6 2.8 0 4.6 1.9 4.6 4.6Zm0 0c0-2.8 1.9-4.6 4.6-4.6 0 2.8-1.9 4.6-4.6 4.6Z" fill="none" stroke="#06110C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>Kaiva</span>
+      </a>
+      <span class="badge">Terms of Use</span>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Kaiva &middot; Calorie &amp; nutrition tracker</p>
+      <h1>Terms of Use</h1>
+      <p class="lead">
+        These Terms govern your use of Kaiva. They explain what the app does, what it does
+        not do, and the rules that apply when you use it. Please read them together with our
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+      <p class="meta">
+        <span>Effective: November 9, 2026</span>
+        <span>Last updated: November 9, 2026</span>
+        <span>Version 1.0</span>
+      </p>
+    </div>
+
+    <section class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">At a glance</h2>
+      <ul class="checks">
+        <li><span><strong>Kaiva is a tracking tool, not a doctor.</strong> Nutrition values and AI estimates are approximate and are not medical advice.</span></li>
+        <li><span><strong>Use the app lawfully and responsibly.</strong> Do not abuse the service, bypass limits or upload illegal content.</span></li>
+        <li><span><strong>Your data stays on your device.</strong> The <a href="privacy.html">Privacy Policy</a> explains what is processed and when data is sent to third parties.</span></li>
+        <li><span><strong>Premium, if offered, is billed by Google Play.</strong> Subscriptions renew automatically until you cancel.</span></li>
+        <li><span><strong>We may update the app and these Terms.</strong> The current version is always available at this URL.</span></li>
+      </ul>
+    </section>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#acceptance">Acceptance of these Terms</a></li>
+        <li><a href="#service">The service</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#responsibilities">Your responsibilities</a></li>
+        <li><a href="#nutrition">Nutrition estimates and AI</a></li>
+        <li><a href="#privacy">Your data and privacy</a></li>
+        <li><a href="#premium">Premium subscriptions</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#changes">Changes and termination</a></li>
+        <li><a href="#disputes">Disputes and applicable law</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="doc" id="acceptance">
+      <h2><span class="n">01</span> Acceptance of these Terms</h2>
+      <p>
+        By downloading, installing or using Kaiva, you agree to these Terms. If you do not
+        agree, do not use the app.
+      </p>
+      <p>
+        These Terms are between you and <strong>Starfelliks</strong>, the developer of Kaiva.
+        They apply to the Android app with the package name
+        <strong>com.kaiva.calorietracker</strong>. Please also read our
+        <a href="privacy.html">Privacy Policy</a>, which describes how the app handles data.
+      </p>
+    </section>
+
+    <section class="doc" id="service">
+      <h2><span class="n">02</span> The service</h2>
+      <p>
+        Kaiva helps you track calories, macronutrients, water and weight; calculate daily
+        targets; view reports; scan barcodes; and optionally analyse food photos with AI.
+      </p>
+      <p>
+        Some features need an internet connection or a paid subscription. We may add, change
+        or remove features, and we may discontinue the app. We do not guarantee that any
+        feature will always be available or work without errors.
+      </p>
+    </section>
+
+    <section class="doc" id="eligibility">
+      <h2><span class="n">03</span> Eligibility</h2>
+      <p>
+        You must be at least 13 years old, or at least 16 in the European Economic Area and
+        the United Kingdom, to use Kaiva. If you are under the age of majority where you live,
+        use the app only with the involvement of a parent or guardian.
+      </p>
+      <p>
+        Do not use the app if you are not legally able to accept these Terms.
+      </p>
+    </section>
+
+    <section class="doc" id="responsibilities">
+      <h2><span class="n">04</span> Your responsibilities</h2>
+      <ul class="plain">
+        <li>Use Kaiva only for lawful, personal, non-commercial purposes.</li>
+        <li>Do not copy, modify, distribute, sell, lease or reverse engineer the app, except as permitted by law.</li>
+        <li>Do not interfere with the app or its servers, and do not attempt to bypass rate limits, security checks or subscription controls.</li>
+        <li>Do not use AI photo analysis to upload illegal content or content that infringes someone else's rights.</li>
+        <li>You are responsible for the accuracy of the information you enter and for your device, backups and access.</li>
+        <li>Do not rely on the app as your only source of nutrition or health information.</li>
+      </ul>
+    </section>
+
+    <section class="doc" id="nutrition">
+      <h2><span class="n">05</span> Nutrition estimates and AI</h2>
+      <p>
+        Calorie targets, macronutrient values, water targets, weight trends, reports and AI
+        results are estimates. Food databases and barcode data may be incomplete, outdated or
+        inaccurate. AI photo analysis can misidentify foods, portions and nutrients, and it
+        may fail. Always check important information, especially if you have allergies or a
+        medical condition.
+      </p>
+      <div class="callout">
+        <p>
+          Kaiva is not a medical device and does not provide medical advice, diagnosis or
+          treatment. Consult a qualified healthcare professional before changing your diet,
+          exercise or medication, particularly if you are pregnant, under 18, or managing a
+          health condition.
+        </p>
+      </div>
+    </section>
+
+    <section class="doc" id="privacy">
+      <h2><span class="n">06</span> Your data and privacy</h2>
+      <p>
+        Kaiva does not require an account. Your profile, diary, water, weight and custom
+        foods are stored on your device. The <a href="privacy.html">Privacy Policy</a>
+        explains what is processed locally, what is sent to third parties when you use online
+        features, and how to delete your data.
+      </p>
+      <p>
+        You are responsible for your own backups. Uninstalling the app or clearing its data
+        removes local data. If you use AI photo analysis, the photo is sent to our service and
+        to DeepSeek as described in the Privacy Policy. Do not photograph people, documents or
+        anything you do not want to send to a third-party AI provider.
+      </p>
+    </section>
+
+    <section class="doc" id="premium">
+      <h2><span class="n">07</span> Premium subscriptions</h2>
+      <p>
+        Some features may be offered as a paid subscription (&ldquo;Premium&rdquo;). This
+        section applies if and when paid features are available in the app.
+      </p>
+      <p>If you purchase Premium:</p>
+      <ul class="plain">
+        <li>The price, billing period and any trial are shown before you confirm the purchase.</li>
+        <li>Payment is charged to your Google Play account.</li>
+        <li>The subscription renews automatically unless you cancel at least 24 hours before the end of the current billing period.</li>
+        <li>You can manage or cancel the subscription in Google Play's subscription settings. Deleting the app does not cancel the subscription.</li>
+        <li>Refunds are handled under Google Play's policies and applicable law. We do not receive or store your payment card details.</li>
+        <li>We may change prices or features. Where required, we will show the new price before it applies.</li>
+        <li>If a free trial is offered, it converts to a paid subscription unless you cancel before it ends.</li>
+      </ul>
+      <p class="muted">
+        The final price, currency and billing period are shown at checkout in Google Play.
+      </p>
+    </section>
+
+    <section class="doc" id="third-parties">
+      <h2><span class="n">08</span> Third-party services</h2>
+      <p>
+        Kaiva uses third-party services for specific features: Cloudflare (hosting our AI scan
+        API), DeepSeek (AI photo analysis), Open Food Facts (barcode product data), and Google
+        (ML Kit barcode recognition, Play Integrity, Android backup and Google Play billing).
+        Their terms and privacy policies apply to their services.
+      </p>
+      <p>
+        The <a href="privacy.html">Privacy Policy</a> lists the data involved and links to
+        those policies. We are not responsible for third-party services.
+      </p>
+    </section>
+
+    <section class="doc" id="ip">
+      <h2><span class="n">09</span> Intellectual property</h2>
+      <p>
+        Kaiva, its name, logo, design, code and content are owned by Starfelliks or its
+        licensors and are protected by intellectual property laws. We grant you a personal,
+        non-exclusive, non-transferable, revocable licence to use the app for personal,
+        non-commercial purposes.
+      </p>
+      <p>
+        You may not copy, modify, distribute, sell, lease or reverse engineer the app except as
+        permitted by law. Food and nutrition data may come from third-party sources and is
+        subject to their terms.
+      </p>
+      <p>
+        You keep ownership of the information you enter. We do not claim ownership of your
+        diary, profile or custom foods.
+      </p>
+    </section>
+
+    <section class="doc" id="disclaimers">
+      <h2><span class="n">10</span> Disclaimers</h2>
+      <p>
+        To the maximum extent permitted by law, Kaiva is provided &ldquo;as is&rdquo; and
+        &ldquo;as available&rdquo;, without warranties of any kind, express or implied,
+        including fitness for a particular purpose, accuracy, and uninterrupted or error-free
+        operation.
+      </p>
+      <p>
+        We do not warrant that the app, food data, AI results or reports will be accurate,
+        complete, current or suitable for your needs. Some jurisdictions do not allow certain
+        disclaimers, so some of these may not apply to you.
+      </p>
+    </section>
+
+    <section class="doc" id="liability">
+      <h2><span class="n">11</span> Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, Starfelliks is not liable for indirect,
+        incidental, special, consequential or punitive damages, or for loss of data, profits,
+        goodwill, or decisions made based on the app.
+      </p>
+      <p>
+        Nothing in these Terms limits liability that cannot be limited by law, including
+        mandatory consumer rights. If we are found liable, our total liability is limited to
+        the amount you paid for Kaiva in the 12 months before the claim.
+      </p>
+      <p class="muted">
+        Some jurisdictions do not allow certain limitations, so some of these may not apply to
+        you.
+      </p>
+    </section>
+
+    <section class="doc" id="changes">
+      <h2><span class="n">12</span> Changes and termination</h2>
+      <p>
+        We may update the app and these Terms. The current version is always available at this
+        URL, with the effective date at the top. If we make material changes, we will update
+        the date and, where appropriate, notify you in the app or store listing. Continued use
+        after the effective date means you accept the updated Terms.
+      </p>
+      <p>
+        You may stop using the app at any time and uninstall it. We may modify, suspend or
+        discontinue the app or any feature. Sections that by their nature should survive
+        termination, such as intellectual property, disclaimers and liability, will survive.
+      </p>
+    </section>
+
+    <section class="doc" id="disputes">
+      <h2><span class="n">13</span> Disputes and applicable law</h2>
+      <p>
+        We encourage you to contact us first so we can try to resolve any issue. These Terms do
+        not limit any mandatory rights you have under the consumer protection laws of your
+        country.
+      </p>
+      <p>
+        If a dispute cannot be resolved informally, it will be handled by the competent courts
+        or authority under the mandatory rules that apply to you. Nothing in these Terms
+        designates a specific jurisdiction or excludes mandatory local rights.
+      </p>
+    </section>
+
+    <section class="doc" id="contact">
+      <h2><span class="n">14</span> Contact</h2>
+      <p>Questions about these Terms? Contact the developer:</p>
+      <div class="note">
+        <p>
+          <strong>Starfelliks</strong><br>
+          Email: <a href="mailto:starfelliks@gmail.com">starfelliks@gmail.com</a>
+        </p>
+        <p class="muted">Please include &ldquo;Terms&rdquo; in the subject line.</p>
+      </div>
+      <p class="muted">
+        App: Kaiva &middot; Android package <strong>com.kaiva.calorietracker</strong>
+      </p>
+      <p>See also: <a href="privacy.html">Privacy Policy</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>&copy; 2026 Starfelliks &middot; Kaiva</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#top">Back to top</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
