@@ -682,8 +682,8 @@
         unless you choose to use an online feature.
       </p>
       <p class="meta">
-        <span>Effective: November 9, 2026</span>
-        <span>Last updated: November 9, 2026</span>
+        <span>Effective: November 11, 2026</span>
+        <span>Last updated: November 11, 2026</span>
         <span>Version 1.0</span>
       </p>
     </div>
@@ -796,10 +796,16 @@
       <p>
         If you choose the optional AI photo analysis feature, the app captures a JPEG image and
         sends it over HTTPS to our API, which is hosted on Cloudflare. Our API forwards the image
-        to DeepSeek for analysis. We do not save the photo on our servers, and we do not use it
-        to train AI models. The result &mdash; food names, estimated portions and nutritional
-        values &mdash; is returned to your device and stored only if you choose to add it to your
-        diary.
+        through OpenRouter to an AI model for analysis. We do not save the photo on our servers,
+        and we do not use it to train AI models. OpenRouter is configured to route the request
+        only to zero-data-retention endpoints with data collection denied, so the model provider
+        does not keep the photo or use it for training. The result &mdash; food names, estimated
+        portions and nutritional values &mdash; is returned to your device and stored only if you
+        choose to add it to your diary.
+      </p>
+      <p>
+        Before the first scan, the app asks for your explicit consent. You can withdraw it at any
+        time in Settings; the app will ask again before the next scan.
       </p>
 
       <div class="callout">
@@ -925,10 +931,10 @@
               <td data-label="Policy"><a class="policy" href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare privacy policy</a></td>
             </tr>
             <tr>
-              <td data-label="Provider">DeepSeek</td>
-              <td data-label="Purpose">AI analysis of food photos.</td>
-              <td data-label="Data involved">The photo and the requested response language. No account details.</td>
-              <td data-label="Policy"><a class="policy" href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" rel="noopener noreferrer">DeepSeek privacy policy</a></td>
+              <td data-label="Provider">OpenRouter</td>
+              <td data-label="Purpose">Routing requests to the AI model that analyzes food photos.</td>
+              <td data-label="Data involved">The photo and the requested response language. No account details. Requests are limited to zero-data-retention endpoints with data collection denied.</td>
+              <td data-label="Policy"><a class="policy" href="https://openrouter.ai/privacy" rel="noopener noreferrer">OpenRouter privacy policy</a></td>
             </tr>
             <tr>
               <td data-label="Provider">Open Food Facts</td>
@@ -977,7 +983,7 @@
       </p>
       <ul class="plain">
         <li><strong>Providing the app's features.</strong> Calculations, diary, charts and reports are produced on your device from the data you enter.</li>
-        <li><strong>Optional AI photo analysis.</strong> The photo and technical data are processed only when you choose to use this feature. You can withdraw this consent by not using the feature.</li>
+        <li><strong>Optional AI photo analysis.</strong> The photo and technical data are processed only when you choose to use this feature. You can withdraw this consent at any time in Settings; the app will ask again before the next scan.</li>
         <li><strong>Security and abuse prevention.</strong> Request signatures, rate limits, quota counters and, where enabled, Play Integrity help protect the service from misuse.</li>
         <li><strong>Legal compliance.</strong> We may process data if required by applicable law.</li>
       </ul>
@@ -995,10 +1001,12 @@
     <section class="doc" id="transfers">
       <h2><span class="n">11</span> International transfers</h2>
       <p>
-        Cloudflare operates a global network. DeepSeek is based in China. Google is based in the
-        United States and operates globally. When you use the optional online features, your
-        photo and technical data may be processed in these countries. Data protection laws in
-        those countries may differ from the laws where you live.
+        Cloudflare operates a global network. OpenRouter is based in the United States, and the
+        model providers it routes to may be located in the United States, the European Union or
+        other countries. Google is based in the United States and operates globally. When you use
+        the optional online features, your photo and technical data may be processed in these
+        countries. Data protection laws in those countries may differ from the laws where you
+        live.
       </p>
       <p>
         We limit the data sent to what is described in this policy and rely on the safeguards
@@ -1020,8 +1028,9 @@
         <div>
           <dt>AI scan photos</dt>
           <dd>
-            Not stored by us after the analysis response is returned. DeepSeek's own retention
-            practices are described in its privacy policy.
+            Not stored by us after the analysis response is returned. The AI scan request is
+            limited to zero-data-retention endpoints, so the model provider does not keep the
+            photo after the response.
           </dd>
         </div>
         <div>
@@ -1096,9 +1105,9 @@
     <section class="doc" id="children">
       <h2><span class="n">15</span> Children</h2>
       <p>
-        Kaiva is not directed to children under 13, or under 16 in the European Economic Area
-        and the United Kingdom. We do not knowingly collect personal data from children. The age
-        you enter, if any, is used only for calorie calculations and is stored on your device.
+        Kaiva is not directed to children under 16. We do not knowingly collect personal data
+        from children. The age you enter, if any, is used only for calorie calculations and is
+        stored on your device.
       </p>
       <p>
         If you are a parent or guardian and believe a child has sent a photo or otherwise
