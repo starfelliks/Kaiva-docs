@@ -899,9 +899,14 @@
     <section class="doc" id="payments">
       <h2><span class="n">07</span> Payments</h2>
       <p>
-        Kaiva does not currently process payments. If paid features become available, purchases
-        and subscriptions will be handled by Google Play Billing. We will not receive or store
-        your payment card details. Google's privacy policy applies to payment processing.
+        Kaiva offers an optional Premium subscription. Purchases and renewals are handled by
+        Google Play Billing; we never receive or store your payment card details. To activate and
+        verify Premium, the app sends your Google Play purchase token, a random installation ID,
+        the app version and a request signature to our Cloudflare-hosted API. The API asks the
+        Google Play Developer API for the subscription status and stores the result (product,
+        plan, status and expiration date) linked to the installation ID. The purchase token is
+        stored only as a one-way hash for as long as needed to verify the subscription. Google's
+        privacy policy applies to payment processing.
       </p>
     </section>
 
@@ -926,8 +931,8 @@
           <tbody>
             <tr>
               <td data-label="Provider">Cloudflare</td>
-              <td data-label="Purpose">Hosting our AI scan API and providing network security.</td>
-              <td data-label="Data involved">Photo while it is in transit, technical request data, IP address.</td>
+              <td data-label="Purpose">Hosting our AI scan and subscription verification API, and providing network security.</td>
+              <td data-label="Data involved">Photo while it is in transit, purchase token (stored as a hash), technical request data, IP address.</td>
               <td data-label="Policy"><a class="policy" href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare privacy policy</a></td>
             </tr>
             <tr>
@@ -944,8 +949,8 @@
             </tr>
             <tr>
               <td data-label="Provider">Google</td>
-              <td data-label="Purpose">On-device barcode recognition (ML Kit), app integrity checks (Play Integrity), and Android backup.</td>
-              <td data-label="Data involved">Barcode frames are processed on your device and are not sent to Google. Play Integrity returns an app and device integrity verdict. Backup is controlled by your Android settings.</td>
+              <td data-label="Purpose">On-device barcode recognition (ML Kit), app integrity checks (Play Integrity), subscription verification via the Google Play Developer API, and Android backup.</td>
+              <td data-label="Data involved">Barcode frames are processed on your device and are not sent to Google. Play Integrity returns an app and device integrity verdict. Subscription status is requested from Google Play using the purchase token. Backup is controlled by your Android settings.</td>
               <td data-label="Policy"><a class="policy" href="https://policies.google.com/privacy" rel="noopener noreferrer">Google privacy policy</a></td>
             </tr>
           </tbody>
