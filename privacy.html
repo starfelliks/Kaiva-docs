@@ -786,7 +786,8 @@
 
       <h3>Barcode scanning</h3>
       <p>
-        When you scan a barcode, the camera image is processed on your device by Google ML Kit.
+        When you scan a barcode, the camera image is processed on your device by the
+        ZXing barcode library.
         The image is not saved and is not sent to us. Only the decoded barcode number and
         standard technical request headers are sent to Open Food Facts to look up product
         information (see <a href="#barcode">Barcode lookups</a>).
@@ -949,8 +950,8 @@
             </tr>
             <tr>
               <td data-label="Provider">Google</td>
-              <td data-label="Purpose">On-device barcode recognition (ML Kit), app integrity checks (Play Integrity), subscription verification via the Google Play Developer API, and Android backup.</td>
-              <td data-label="Data involved">Barcode frames are processed on your device and are not sent to Google. Play Integrity returns an app and device integrity verdict. Subscription status is requested from Google Play using the purchase token. Backup is controlled by your Android settings.</td>
+              <td data-label="Purpose">App integrity checks (Play Integrity), subscription verification via the Google Play Developer API, and Android backup.</td>
+              <td data-label="Data involved">Play Integrity returns an app and device integrity verdict. Subscription status is requested from Google Play using the purchase token. Backup is controlled by your Android settings.</td>
               <td data-label="Policy"><a class="policy" href="https://policies.google.com/privacy" rel="noopener noreferrer">Google privacy policy</a></td>
             </tr>
           </tbody>
